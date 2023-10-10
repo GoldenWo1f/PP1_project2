@@ -79,11 +79,11 @@
 
   <div class="row">
     <div class="col-md-8 order-md-1">
-      <form class="needs-validation" novalidate>
+      <form name="forml" class="needs-validation" onsubmit="return validateForm()" method="post" novalidate>
         <div class="mb-3">
           <label for="username">학번</label>
           <div class="input-group">
-            <input type="text" class="form-control" id="username" placeholder="학번 8자리" required>
+            <input type="text" class="form-control" id="username" name="number" placeholder="학번 8자리" required>
             <div class="invalid-feedback" style="width: 100%;">
               학번을 입력해주세요
             </div>
@@ -92,7 +92,7 @@
 
         <div class="mb-3">
           <label for="address">이름</label>
-          <input type="text" class="form-control" id="address" placeholder="ex) 홍길동" required>
+          <input type="text" class="form-control" id="address" name="name" placeholder="ex) 홍길동" required>
           <div class="invalid-feedback">
             이름을 입력해주세요.
           </div>
@@ -103,7 +103,7 @@
 
         <div class="col-md-6 mb-3">
           <label for="zip">생년월일</label>
-          <input type="text" class="form-control" id="zip" placeholder="YYYY.MM.DD" required>
+          <input type="text" class="form-control" id="zip" name="birthday" placeholder="YYYY.MM.DD" required>
           <div class="invalid-feedback">
             생년월일을 입력해주세요.
           </div>
@@ -111,7 +111,7 @@
 
           <div class="col-md-6 mb-3">
             <label for="country">소속 학부</label>
-            <select class="custom-select d-block w-100" id="country" required>
+            <select class="custom-select d-block w-100" id="country" name="department" required>
               <option value="">학부 선택</option>
               <option>글로벌리더십학부</option>
               <option>국제어문학부</option>
@@ -132,15 +132,16 @@
           </div>     
         </div>
           <label for="gender">성별</label><br>
-          <input type="radio" name="fav_language" required>
+          <input type="radio" name="gender" required>
           <label for="html">남</label>
-          <input type="radio" name="fav_language" required>
+          <input type="radio" name="gender" required>
           <label for="css">여</label>
           <div class="invalid-feedback">
             성별을 선택해주세요.
           </div>
         <br><br>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">추가</button>
+        <!-- <button class="btn btn-primary btn-lg btn-block" type="submit">추가</button> -->
+        <input class="btn btn-primary btn-lg btn-block" type="submit" value="추가">
       </form>
     </div>
   </div>
@@ -155,11 +156,46 @@
   </footer>
 </div>
 
+  <script>
+    function validateForm() {
+      var number = document.forml.number;
+      if(number.value == ''){
+        alert("학번을 입력하세요");
+        number.focus();
+        return false;
+      }
+      var name = document.forml.name;
+      if(name.value == ''){
+        alert("이름을 입력하세요");
+        name.focus();
+        return false;
+      }
+      var birthday = document.forml.birthday;
+      if(birthday.value == ''){
+        alert("생년월일을 입력하세요");
+        birthday.focus();
+        return false;
+      }
+      var department= document.forml.department;
+      if(department.value == ''){
+        alert("소속 학부를 선택하세요");
+        department.focus();
+        return false;
+      }
+      var gender= document.forml.gender;
+      if(gender.value == ''){
+        alert("성별을 선택하세요");
+        gender[0].focus();
+        return false;
+      }
+      location.href='https://rainbow-dasik-a1fe7d.netlify.app/dashboard/list.html';
+    }
+  </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
       
-        <script src="form-validation.js"></script>
+        <script src="form-validation.js"></script> -->
   </body>
 </html>
