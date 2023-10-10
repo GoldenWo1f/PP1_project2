@@ -19,4 +19,5 @@
     })
   }, false)
   alert("입력되었습니다.");
+  location.href="https://rainbow-dasik-a1fe7d.netlify.app/dashboard/list.html";
 })()
