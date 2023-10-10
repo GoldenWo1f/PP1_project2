@@ -16,7 +16,7 @@
         form.classList.add('was-validated')
         if (form.checkValidity()) {
           alert("추가되었습니다.");
-          window.location.href='google.com';
+          location.href='google.com';
         }
       }, false)
     })
