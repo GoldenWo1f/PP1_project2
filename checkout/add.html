@@ -74,23 +74,19 @@
 
   <div class="row">
     <div class="col-md-8 order-md-1">
-      <form name="forml" class="needs-validation" onsubmit="return validateForm()" method="post" novalidate>
+      <form name="forml" class="needs-validation" onsubmit="return validateForm()" method="post" >
         <div class="mb-3">
           <label for="username">학번</label>
           <div class="input-group">
-            <input type="text" class="form-control" id="username" name="number" placeholder="학번 8자리" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              학번을 입력해주세요
-            </div>
+            <input type="text" class="form-control" id="username" name="number" placeholder="학번 8자리" >
+            
           </div>
         </div>
 
         <div class="mb-3">
           <label for="address">이름</label>
-          <input type="text" class="form-control" id="address" name="name" placeholder="ex) 홍길동" required>
-          <div class="invalid-feedback">
-            이름을 입력해주세요.
-          </div>
+          <input type="text" class="form-control" id="address" name="name" placeholder="ex) 홍길동" >
+          
         </div>
         
 
@@ -98,15 +94,13 @@
 
         <div class="col-md-6 mb-3">
           <label for="zip">생년월일</label>
-          <input type="text" class="form-control" id="zip" name="birthday" placeholder="YYYY.MM.DD" required>
-          <div class="invalid-feedback">
-            생년월일을 입력해주세요.
-          </div>
+          <input type="text" class="form-control" id="zip" name="birthday" placeholder="YYYY.MM.DD" >
+          
         </div>
 
           <div class="col-md-6 mb-3">
             <label for="country">소속 학부</label>
-            <select class="custom-select d-block w-100" id="country" name="department" required>
+            <select class="custom-select d-block w-100" id="country" name="department" >
               <option value="">학부 선택</option>
               <option>글로벌리더십학부</option>
               <option>국제어문학부</option>
@@ -121,21 +115,16 @@
               <option>생명과학부</option>
               <option>ICT창업학부</option>
             </select>
-            <div class="invalid-feedback">
-              소속 학부를 선택해주세요.
-            </div>
+            
           </div>     
         </div>
           <label for="gender">성별</label><br>
-          <input type="radio" name="gender" required>
+          <input type="radio" name="gender" >
           <label for="html">남</label>
-          <input type="radio" name="gender" required>
+          <input type="radio" name="gender" >
           <label for="css">여</label>
-          <div class="invalid-feedback">
-            성별을 선택해주세요.
-          </div>
+          
         <br><br>
-        <!-- <button class="btn btn-primary btn-lg btn-block" type="submit">추가</button> -->
         <input class="btn btn-primary btn-lg btn-block" type="submit" value="추가">
       </form>
     </div>
@@ -183,7 +172,9 @@
         gender[0].focus();
         return false;
       }
-      location.href='https://rainbow-dasik-a1fe7d.netlify.app/dashboard/list.html';
+      alert("추가되었습니다.")
+      window.location.href='https://rainbow-dasik-a1fe7d.netlify.app/dashboard/list.html';
+      return false;
     }
   </script>
   </body>
