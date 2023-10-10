@@ -12,9 +12,12 @@
         if (form.checkValidity() === false) {
           event.preventDefault()
           event.stopPropagation()
-          
         }
         form.classList.add('was-validated')
+        if (form.checkValidity()) {
+          alert("추가되었습니다.");
+          location.href='https://rainbow-dasik-a1fe7d.netlify.app/dashboard/list.html';
+        }
       }, false)
     })
   }, false)
