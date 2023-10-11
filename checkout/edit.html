@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Checkout example · Bootstrap v4.6</title>
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../bootstrap.min.css" rel="stylesheet">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+      }
+
+    </style>
+  </head>
+  <body class="bg-light">
+   
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Top navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+<div class="container">
+  <div class="py-5 text-center">
+    <h3>수정</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <form name="forml" class="needs-validation" onsubmit="return validateForm()" method="post" >
+        <div class="mb-3">
+          <label for="username">학번</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="username" name="number" placeholder="학번 8자리" value="00000001">
+            
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">이름</label>
+          <input type="text" class="form-control" id="address" name="name" placeholder="ex) 홍길동" value="박철수">
+          
+        </div>
+        
+
+        <div class="row">
+
+        <div class="col-md-6 mb-3">
+          <label for="zip">생년월일</label>
+          <input type="text" class="form-control" id="zip" name="birthday" placeholder="YYYY.MM.DD" value="2000.01.01">
+          
+        </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="country">소속 학부</label>
+            <select class="custom-select d-block w-100" id="country" name="department" >
+              <option value="">학부 선택</option>
+              <option>글로벌리더십학부</option>
+              <option>국제어문학부</option>
+              <option>경영경제학부</option>
+              <option>법학부</option>
+              <option>커뮤니케이션학부</option>
+              <option>상담심리사회복지학부</option>
+              <option selected>전산전자공학부</option>
+              <option>공간환경시스템공학부</option>
+              <option>기계제어공학부</option>
+              <option>콘텐츠융합디자인학부</option>
+              <option>생명과학부</option>
+              <option>ICT창업학부</option>
+            </select>
+            
+          </div>     
+        </div>
+          <label for="gender">성별</label><br>
+          <input type="radio" name="gender" checked="checked">
+          <label for="html">남</label>
+          <input type="radio" name="gender" >
+          <label for="css">여</label>
+          
+        <br><br>
+        <input class="btn btn-primary btn-lg btn-block" type="submit" value="수정">
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017-2022 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>
+
+  <script>
+    function validateForm() {
+      var number = document.forml.number;
+      if(number.value == ''){
+        alert("학번을 입력하세요");
+        number.focus();
+        return false;
+      }
+      var name = document.forml.name;
+      if(name.value == ''){
+        alert("이름을 입력하세요");
+        name.focus();
+        return false;
+      }
+      var birthday = document.forml.birthday;
+      if(birthday.value == ''){
+        alert("생년월일을 입력하세요");
+        birthday.focus();
+        return false;
+      }
+      var department= document.forml.department;
+      if(department.value == ''){
+        alert("소속 학부를 선택하세요");
+        department.focus();
+        return false;
+      }
+      var gender= document.forml.gender;
+      if(gender.value == ''){
+        alert("성별을 선택하세요");
+        gender[0].focus();
+        return false;
+      }
+      if(confirm("수정하시겠습니까?")){
+        window.location.href='https://rainbow-dasik-a1fe7d.netlify.app/dashboard/list.html';
+        return false;
+      }
+    }
+  </script>
+  </body>
+</html>
