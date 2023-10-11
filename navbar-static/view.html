@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Top navbar example · Bootstrap v4.6</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/navbar-static/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      table th, td {
+        border: 1px solid #444444;
+        text-align: center;
+        
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .mybtn {
+        padding: 10px 30px 10px 30px;
+      }
+      
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="navbar-top.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Top navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<br><br>
+<h2 align="center">학부생 정보</h2><br><br>
+<table border="0" cellspacing="1" width="750" id="att_list">
+  <tbody>
+
+  <tr height="40" bgcolor="#ffffff">
+      <td width="250" bgcolor="#F7F7F7" class="tblcationTitlecls">
+          학번</td>
+      <td width="500" style="padding-left:5px;">
+          00000001</td>
+  </tr>
+  <tr height="40" bgcolor="#ffffff">
+    <td width="250" bgcolor="#F7F7F7" class="tblcationTitlecls">
+        이름</td>
+    <td width="500" style="padding-left:5px;">
+        박철수</td>
+</tr>
+<tr height="40" bgcolor="#ffffff">
+  <td width="250" bgcolor="#F7F7F7" class="tblcationTitlecls">
+      성별</td>
+  <td width="500" style="padding-left:5px;">
+      남</td>
+</tr>
+<tr height="40" bgcolor="#ffffff">
+  <td width="250" bgcolor="#F7F7F7" class="tblcationTitlecls">
+      성별</td>
+  <td width="500" style="padding-left:5px;">
+      남</td>
+</tr>
+<tr height="40" bgcolor="#ffffff">
+  <td width="250" bgcolor="#F7F7F7" class="tblcationTitlecls">
+      생년월일</td>
+  <td width="500" style="padding-left:5px;">
+      2000.01.01</td>
+</tr>
+<tr height="40" bgcolor="#ffffff">
+  <td width="250" bgcolor="#F7F7F7" class="tblcationTitlecls">
+      학부</td>
+  <td width="500" style="padding-left:5px;">
+      전산전자공학부</td>
+</tr>
+
+</tbody></table>
+
+<div class="d-flex gap-2 justify-content-center py-5">
+  <button class="mybtn btn btn-primary align-items-center" type="button" onclick="">
+    수정
+  </button>
+  <button class="mybtn btn btn-outline-secondary align-items-center" type="button" onclick="del()">
+    삭제
+  </button>
+</div>
+      <script>
+        function del() {
+          if(confirm("삭제하시겠습니까?")){
+            alert("삭제되었습니다.");
+            window.location.href='https://rainbow-dasik-a1fe7d.netlify.app/dashboard/list.html';
+            return false;
+          }else{
+            return false;
+          }
+        }
+      </script>
+  </body>
+</html>
